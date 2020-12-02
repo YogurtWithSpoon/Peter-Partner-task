@@ -1,0 +1,33 @@
+.card__select__item {
+  cursor: pointer;
+  height: 70px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  padding: 0 20px 0 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.card__select__item > svg {
+  margin-right: 16px;
+}
+.card__select {
+  background: var(--white);  
+}
+
+.active__card {
+  width: 8px;
+  height: 8px;
+  background-color: var(--active);
+  border-radius: 100%;
+  flex-flow: 1;
+  margin-left: auto;
+}
+.CardSelectPage{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
