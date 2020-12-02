@@ -12,7 +12,7 @@ function MainPage() {
   const [{activeUser, activeCurrency }, dispatch] = useStateValue();
   useEffect(() => {
     axios
-      .get("http://www.cbr-xml-daily.ru/daily_json.js")
+      .get("https://www.cbr-xml-daily.ru/daily_json.js")
       .then(function (response) {
         dispatch({
           type: actionTypes.SET_CURRENCY,
@@ -30,7 +30,7 @@ function MainPage() {
 
   useEffect(() => {
     axios
-      .get("http://hr.peterpartner.net/test/android/v1/users.json")
+      .get("https://hr.peterpartner.net/test/android/v1/users.json")
       .then(function (response) {
         dispatch({
           type: actionTypes.SET_USERS,
