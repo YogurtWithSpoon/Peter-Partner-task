@@ -39,7 +39,12 @@ function MainPage() {
       })
       .catch(function (error) {
         console.log(error);
-      });
+      })
+      .then(function(){
+        dispatch({
+          type: actionTypes.SET_ACTIVEUSER
+        })
+      })
   }, [dispatch]);
 
   return (

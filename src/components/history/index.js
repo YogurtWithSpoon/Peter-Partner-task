@@ -1,6 +1,7 @@
 import React from "react";
+import Skeleton from "react-loading-skeleton";
 import {currencySybmol} from '../../helpers/currencySymbol'
-import { Scrollbar } from "react-scrollbars-custom";
+import PropTypes from 'prop-types';
 import "./styles.css";
 
 function History({ data,currency }) {
@@ -11,8 +12,8 @@ function History({ data,currency }) {
     <div className="history">
       <div className="history__label">History</div>
       <div className="history__scroll">
-        {data &&
-          data.map((item,index) => {
+        {data ?
+          (data.map((item,index) => {
             return (
               <div className="history__scroll__item" key={index}>
                 {/* hardcoded img */}
@@ -42,11 +43,22 @@ function History({ data,currency }) {
                 </div>
               </div>
             );
-          })}
+          })) : <Skeleton height="40px" width="300px" style={{marginTop:"10px"}} count={3}/>}
       </div>
 
     </div>
   );
+}
+
+History.propTypes = {
+  currency: PropTypes.shape({
+    Value: PropTypes.number
+  }),
+  data: PropTypes.arrayOf(PropTypes.shape({
+    amount: PropTypes.string,
+    date: PropTypes.string,
+    title: PropTypes.string
+  }))
 }
 
 export default History;

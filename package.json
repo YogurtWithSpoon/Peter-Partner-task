@@ -2,7 +2,6 @@
   "name": "bankapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://f0302262.xsph.ru/TestTaskPP",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -10,11 +9,10 @@
     "axios": "^0.21.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-custom-scroll": "^4.2.1",
     "react-dom": "^17.0.1",
+    "react-loading-skeleton": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "react-scrollbars-custom": "^4.0.25",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

@@ -5,6 +5,7 @@ import { useStateValue } from "../datalayer/stateprovider";
 import './styles.css'
 import { useHistory } from "react-router-dom";
 import { actionTypes } from "../datalayer/reducer";
+import PropTypes from 'prop-types';
 
 function CardSelectPage() {
   const [{users,activeUser},dispatch] = useStateValue();
@@ -20,8 +21,8 @@ function CardSelectPage() {
     })
 
     dispatch({
-      type: actionTypes.SET_ACTIVEUSER,
-      payload: {id:newActiveUserID}
+      type: actionTypes.SET_ACTIVEUSERID,
+      payload: newActiveUserID
     })
   }
 
@@ -43,6 +44,12 @@ function CardSelectPage() {
       </div>
     </div>
   );
+}
+CardSelectPage.propTypes = {
+  users: PropTypes.arrayOf(PropTypes.shape({
+    card_number: PropTypes.string,
+    type: PropTypes.oneOf(['mastercard,unionpay,AccountIcon,visa'])
+  }))
 }
 
 export default CardSelectPage;
