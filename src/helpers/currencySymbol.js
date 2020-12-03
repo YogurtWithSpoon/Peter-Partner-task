@@ -1,8 +1,8 @@
-export function currencySybmol(CharCode){
+export function currencySybmol(charCode){
   const dic = {
     GBP: "£",
     EUR: "€",
     USD: "$"
   }
-  return dic[CharCode]
+  return dic[charCode]
 }

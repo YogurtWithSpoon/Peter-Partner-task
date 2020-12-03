@@ -6,6 +6,7 @@ import "./styles.css";
 function Currency() {
   const [active, setActive] = useState([true, false, false]);
   const [{},dispatch ] = useStateValue();
+  
   return (
     <div className="currency">
       <div className="currency__label">Change currency</div>

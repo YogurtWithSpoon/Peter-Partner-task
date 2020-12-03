@@ -6,5 +6,5 @@
 }
 
 .container{
-  width: 328px;
+  min-width: 328px;
 }

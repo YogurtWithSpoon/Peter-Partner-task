@@ -9,15 +9,15 @@ import './styles.css';
 
 function CreditCard({data,currency}) {
   const history = useHistory();
-  const HandleClick = () => {
+  const handleClick = () => {
     history.push('/selectuser')
   }
   const convertedValue = String((data?.balance / currency?.Value).toFixed(2)).replace('.',',')
   function numberWithSpaces(x) {
-    return x ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") : null;
+    return x ? String(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") : null;
   }
   return (
-    <div className="card" onClick={HandleClick}>
+    <div className="card" onClick={handleClick}>
       <div className="card__row">
         {svgGenerator(data?.type)}
         <div className="card__number">{data?.card_number || <Skeleton height="25px" width="290px" />}</div>

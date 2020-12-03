@@ -25,9 +25,10 @@
   flex-flow: 1;
   margin-left: auto;
 }
-.CardSelectPage{
+
+.card_select_page{
   display:flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 23px);
 }

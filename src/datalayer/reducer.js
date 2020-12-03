@@ -40,7 +40,7 @@ const reducer = (state, action) => {
     case actionTypes.SET_CURRENTCURRENCY:
       return {
         ...state,
-        activeCurrency: state?.currency[action.payload],
+        activeCurrency: state.currency[action.payload],
       };
     default:
       return state;
